@@ -71,60 +71,6 @@
           "name": "Mary Gordon"
         }
       ]
-    },
-    {
-      "id": 3461608,
-      "user": {
-        "id": "twuerk200",
-        "name": "Taylor Wuerker"
-      },
-      "category": "nature",
-      "organizer": {
-        "id": "twuerk200",
-        "name": "Taylor Wuerker"
-      },
-      "title": "Nature Walk",
-      "description": "walk with trees",
-      "location": "",
-      "date": "",
-      "time": "",
-      "attendees": []
-    },
-    {
-      "id": 8479694,
-      "user": {
-        "id": "twuerk200",
-        "name": "Taylor Wuerker"
-      },
-      "category": "education",
-      "organizer": {
-        "id": "twuerk200",
-        "name": "Taylor Wuerker"
-      },
-      "title": "Testing",
-      "description": "",
-      "location": "",
-      "date": "",
-      "time": "",
-      "attendees": []
-    },
-    {
-      "id": 3264971,
-      "user": {
-        "id": "twuerk200",
-        "name": "Taylor Wuerker"
-      },
-      "category": "education",
-      "organizer": {
-        "id": "twuerk200",
-        "name": "Taylor Wuerker"
-      },
-      "title": "Testing Again",
-      "description": "",
-      "location": "",
-      "date": "",
-      "time": "",
-      "attendees": []
     }
   ]
 }
