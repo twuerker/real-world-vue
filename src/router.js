@@ -3,17 +3,22 @@ import Router from 'vue-router'
 import EventList from './views/EventList.vue'
 import EventShow from './views/EventShow.vue'
 import EventCreate from './views/EventCreate.vue'
+import NotFound from './views/NotFound.vue'
+import NetworkIssue from './views/NetworkIssue.vue'
+import NProgress from 'nprogress'
+import store from '@/store/store'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
       path: '/',
       name: 'event-list',
-      component: EventList
+      component: EventList,
+      props: true
     },
     {
       path: '/event/create',
@@ -24,16 +29,56 @@ export default new Router({
       path: '/event/:id',
       name: 'event-show',
       component: EventShow,
+      props: true,
+      beforeEnter(routeTo, routeFrom, next) {
+        store
+          .dispatch('event/fetchEvent', routeTo.params.id)
+          .then(event => {
+            routeTo.params.event = event
+            next()
+          })
+          .catch(error => {
+            if (error.response && error.response.status == 404) {
+              next({
+                name: '404',
+                params: { resource: 'event' }
+              })
+            } else {
+              next({
+                name: 'network-issue'
+              })
+            }
+          })
+      }
+    },
+    {
+      path: '/404',
+      name: '404',
+      component: NotFound,
       props: true
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/network-issue',
+      name: 'network-issue',
+      component: NetworkIssue
+    },
+    {
+      path: '*',
+      redirect: {
+        name: '404',
+        params: { resource: 'page' }
+      }
     }
   ]
 })
+
+router.beforeEach((routeTo, routeFrom, next) => {
+  NProgress.start()
+  next()
+})
+
+router.afterEach((routeTo, routeFrom) => {
+  NProgress.done()
+})
+
+export default router
