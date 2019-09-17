@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Beach Cleanup",
-      "date": "Aug 28 2018",
+      "date": "2019-08-18T19:47:00.000Z",
       "time": "10:00",
       "location": "Daytona Beach",
       "description": "Let's clean up this beach.",
@@ -31,7 +31,7 @@
     {
       "id": 2,
       "title": "Park Cleanup",
-      "date": "Nov 12 2018",
+      "date": "2019-11-12T19:47:00.000Z",
       "time": "12:00",
       "location": "132 N Magnolia Street, Orlando, Florida",
       "description": "We're going to clean up this park.",
@@ -51,7 +51,7 @@
     {
       "id": 3,
       "title": "Pet Adoption Day",
-      "date": "Dec 2 2018",
+      "date": "2019-12-02T19:47:00.000Z",
       "time": "12:00",
       "location": "132 N Magnolia Street, Orlando, Florida",
       "description": "Help animals find new homes.",
@@ -75,7 +75,7 @@
     {
       "id": 4,
       "title": "Birthday",
-      "date": "Dec 2 2018",
+      "date": "2019-12-18T19:47:00.000Z",
       "time": "12:00",
       "location": "132 N Magnolia Street, Orlando, Florida",
       "description": "Help animals find new homes.",
@@ -112,6 +112,24 @@
       "location": "Park",
       "date": "2019-09-13T19:55:00.000Z",
       "time": "14:00",
+      "attendees": []
+    },
+    {
+      "id": 9616960,
+      "user": {
+        "id": "twuerk200",
+        "name": "Taylor"
+      },
+      "category": "nature",
+      "organizer": {
+        "id": "twuerk200",
+        "name": "Taylor"
+      },
+      "title": "Puppy Party",
+      "description": "Party time!!",
+      "location": "Bark",
+      "date": "2019-09-18T19:47:00.000Z",
+      "time": "17:00",
       "attendees": []
     }
   ]
